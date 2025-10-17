@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUPER‑STUCER Projecten</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f2f5f9;
+      color: #2c3e50;
+    }
+    header {
+      background-color: #007acc;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .tools {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 1.6em;
+      opacity: 0.6;
+    }
+    .tools span {
+      display: inline-block;
+      margin: 0 4px;
+      animation: floatTools 3s infinite ease-in-out;
+    }
+    @keyframes floatTools {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #007acc;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+    .overlay h3 {
+      margin-bottom: 12px;
+      font-size: 1.4em;
+    }
+    .overlay a {
+      background: #25d366;
+      padding: 10px 16px;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .overlay a:hover {
+      background: #1ebe5b;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #eef2f5;
+      color: #777;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      .overlay h3 {
+        font-size: 1.1em;
+      }
+      .overlay a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SUPER‑STUCER</h1>
+    <div class="tools">
+      <span>🛠️</span>
+      <span>🔧</span>
+      <span>⚒️</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Onze Voorbeelden van Stuc & Verfwerk</h2>
+
+    <div class="gallery">
+      <!-- Project 1 -->
+      <div class="gallery-item" onclick="window.open('https://wa.me/31628242666?text=Ik%20wil%20meer%20info%20over%20project%201', '_blank')">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6954?auto=format&fit=crop&w=800&q=80" alt="Stucwerk muur">
+        <div class="overlay">
+          <h3>Glad stucwerk woonkamer</h3>
+          <a href="https://wa.me/31628242666?text=Ik%20wil%20meer%20info%20over%20project%201" target="_blank">Bekijk via WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="gallery-item" onclick="window.open('https://wa.me/31628242666?text=Meer%20info%20over%20project%202', '_blank')">
+        <img src="https://images.unsplash.com/photo-1624298357894-d2629c3a9e97?auto=format&fit=crop&w=800&q=80" alt="Verfwerk muur">
+        <div class="overlay">
+          <h3>Moderne verf afwerking</h3>
+          <a href="https://wa.me/31628242666?text=Meer%20info%20over%20project%202" target="_blank">WhatsApp ons</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="gallery-item" onclick="window.open('https://wa.me/31628242666?text=Meer%20info%20over%20project%203', '_blank')">
+        <img src="https://images.unsplash.com/photo-1599427308073-6a0b4b0c4f0a?auto=format&fit=crop&w=800&q=80" alt="Buitenmuur stucwerk">
+        <div class="overlay">
+          <h3>Buitenmuur renovatie</h3>
+          <a href="https://wa.me/31628242666?text=Meer%20info%20over%20project%203" target="_blank">Direct via WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="gallery-item" onclick="window.open('https://wa.me/31628242666?text=Meer%20info%20over%20project%204', '_blank')">
+        <img src="https://images.unsplash.com/photo-1616046229478-9901ed7bfa48?auto=format&fit=crop&w=800&q=80" alt="Stucco muur structuur">
+        <div class="overlay">
+          <h3>Textuur stucstructuur</h3>
+          <a href="https://wa_subscribe=31628242666?text=Meer%20info%20over%20project%204" target="_blank">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 SUPER‑STUCER – Alle rechten voorbehouden. Contact via <a href="https://wa.me/31628242666" target="_blank">WhatsApp</a>.
+  </footer>
+
+</body>
+  </html>
